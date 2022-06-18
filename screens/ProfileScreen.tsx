@@ -4,12 +4,12 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function MissionsScreen({ navigation }: RootTabScreenProps<'Missions'>) {
+export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profile'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Missions</Text>
+      <Text style={styles.title}>Profile</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/MissionsScreen.tsx" />
+      <EditScreenInfo path="/screens/ProfileScreen.tsx" />
     </View>
   );
 }
