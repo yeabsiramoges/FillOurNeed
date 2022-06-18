@@ -16,7 +16,7 @@ export function ManageTeam() {
     try {
       // TODO: Call the getMyTeamMembers Realm function and pass the result to setTeamMemberList().
     } catch (err) {
-      Alert.alert("An error occurred while getting team members", err);
+      Alert.alert("An error occurred while getting community members", err);
     }
   };
 
@@ -27,7 +27,7 @@ export function ManageTeam() {
       // TODO: Call the addTeamMember Realm function with the given email,
       // then call getTeam() to refresh the list.
     } catch (err) {
-      Alert.alert("An error occurred while adding a team member", err.message);
+      Alert.alert("An error occurred while adding a community member", err.message);
     }
   };
 
@@ -38,12 +38,12 @@ export function ManageTeam() {
       // TODO: Call the removeTeamMember Realm function with the given email,
       // then call getTeam() to refresh the list.
     } catch (err) {
-      Alert.alert("An error occurred while removing a team member", err);
+      Alert.alert("An error occurred while removing a commmunity member", err);
     }
   };
 
   const openDeleteDialogue = (member) => {
-    Alert.alert("Remove the following member from your team?", member.name, [
+    Alert.alert("Remove the following member from your community?", member.name, [
       {
         text: "Remove",
         onPress: () => {
@@ -62,7 +62,7 @@ export function ManageTeam() {
   return (
     <View style={styles.manageTeamWrapper}>
       <View style={styles.manageTeamTitle}>
-        <Text h3>My Team</Text>
+        <Text h3>My Community</Text>
       </View>
       {teamMemberList.map((member) => (
         <ListItem
@@ -78,12 +78,12 @@ export function ManageTeam() {
         </ListItem>
       ))}
 
-      <Text h4> Add member:</Text>
+      <Text h4> Add community member:</Text>
       <View style={styles.inputContainer}>
         <TextInput
           onChangeText={(text) => setNewTeamMember(text)}
           value={newTeamMember}
-          placeholder="new team member username"
+          placeholder="new community member username"
           style={styles.addTeamMemberInput}
           autoCapitalize="none"
         />

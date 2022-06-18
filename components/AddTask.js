@@ -19,7 +19,7 @@ export function AddTask({ createTask }) {
       >
         <>
           <Input
-            placeholder="New Task Name"
+            placeholder="Add a new mission!"
             onChangeText={(text) => setNewTaskName(text)}
             autoFocus={true}
           />

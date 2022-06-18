@@ -10,16 +10,16 @@ import { useTasks } from "../providers/TasksProvider";
 import { TaskItem } from "../components/TaskItem";
 import { AddTask } from "../components/AddTask";
 
-export function TasksView({ navigation, route }) {
+export function MissionsView({ navigation, route }) {
   const { name } = route.params;
 
   const [overlayVisible, setOverlayVisible] = useState(false);
 
-  const { tasks, createTask } = useTasks();
+  const { missions, createMissions } = useTasks();
   useEffect(() => {
     navigation.setOptions({
       headerRight: function Header() {
-        return <AddTask createTask={createTask} />;
+        return <AddTask createMissions={createMissions} />;
       },
       title: `${name}'s Tasks`,
     });
@@ -27,15 +27,15 @@ export function TasksView({ navigation, route }) {
 
   return (
     <View>
-      {tasks.map((task) =>
-        task ? <TaskItem key={`${task._id}`} task={task} /> : null
+      {missions.map((mission) =>
+        missions ? <TaskItem key={`${mission._id}`} mission={mission} /> : null
       )}
 
-      {name === "My Project" ? (
+      {name === "My Community" ? (
         <>
           <View style={styles.manageTeamButtonContainer}>
             <Button
-              title="Manage Team"
+              title="Manage Community"
               onPress={() => setOverlayVisible(true)}
             />
           </View>

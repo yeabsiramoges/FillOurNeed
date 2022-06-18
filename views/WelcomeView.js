@@ -9,9 +9,9 @@ export function WelcomeView({ navigation }) {
   const { user, signUp, signIn } = useAuth();
 
   useEffect(() => {
-    // If there is a user logged in, go to the Projects page.
+    // If there is a user logged in, go to the Missions page.
     if (user != null) {
-      navigation.navigate("Projects");
+      navigation.navigate("Missions");
     }
   }, [user]);
 

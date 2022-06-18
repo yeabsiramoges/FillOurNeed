@@ -7,8 +7,8 @@ import { AuthProvider } from "./providers/AuthProvider";
 import { TasksProvider } from "./providers/TasksProvider";
 
 import { WelcomeView } from "./views/WelcomeView";
-import { ProjectsView } from "./views/ProjectsView";
-import { TasksView } from "./views/TasksView";
+import { CommunityView } from "./views/CommunityView";
+import { TasksView } from "./views/MissionsView";
 
 import { Logout } from "./components/Logout";
 
@@ -20,14 +20,14 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Welcome View"
+            name="Welcome"
             component={WelcomeView}
-            options={{ title: "Task Tracker" }}
+            options={{ title: "FillOurNeed" }}
           />
           <Stack.Screen
-            name="Projects"
-            component={ProjectsView}
-            title="ProjectsView"
+            name="Community"
+            component={CommunityView}
+            title="CommunityView"
             headerBackTitle="log out"
             options={{
               headerLeft: function Header() {
@@ -35,7 +35,7 @@ const App = () => {
               },
             }}
           />
-          <Stack.Screen name="Task List">
+          <Stack.Screen name="Missions">
             {(props) => {
               const { navigation, route } = props;
               const { user, projectPartition } = route.params;
