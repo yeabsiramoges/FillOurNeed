@@ -1,4 +1,10 @@
 {
-  "name": "rn",
-  "displayName": "rn"
+  "expo": {
+    "name": "FillOurNeed",
+    "slug": "FillOurNeed",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
 }

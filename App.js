@@ -8,7 +8,7 @@ import { TasksProvider } from "./providers/TasksProvider";
 
 import { WelcomeView } from "./views/WelcomeView";
 import { CommunityView } from "./views/CommunityView";
-import { TasksView } from "./views/MissionsView";
+import { MissionsView } from "./views/MissionsView";
 
 import { Logout } from "./components/Logout";
 
@@ -41,7 +41,7 @@ const App = () => {
               const { user, projectPartition } = route.params;
               return (
                 <TasksProvider user={user} projectPartition={projectPartition}>
-                  <TasksView navigation={navigation} route={route} />
+                  <MissionsView navigation={navigation} route={route} />
                 </TasksProvider>
               );
             }}

@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { useAuth } from "../providers/AuthProvider";
+import { useAuth } from "../../providers/AuthProvider";
 import { ListItem } from "react-native-elements";
 
 export function CommunityView({ navigation }) {
