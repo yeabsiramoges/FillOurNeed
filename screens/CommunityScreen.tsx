@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native';
+import Carousel from 'react-native-snap-carousel';
+import Card from '../components/Card';
 
 import EditCommunity from '../components/EditCommunity';
 import { Text, View } from '../components/Themed';
@@ -8,7 +10,9 @@ export default function CommunityScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Community</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditCommunity path="/screens/CommunityScreen.tsx" />
+      <EditCommunity path="/screens/CommunityScreen.tsx" /> 
+      <Card />
+      <Card />
     </View>
   );
 }

@@ -8,7 +8,7 @@ import { Pressable, Text, Box, HStack, Spacer, Flex, Badge, Center, NativeBasePr
 
 export default function Missions({missionText, serviceType, description}: {missionText: string, serviceType: string, description: string}) {
     const now = new Date();
-    return <Box alignItems="center">
+    return <Box alignItems="center" padding={2}>
       <Pressable>
         {({
         isHovered,
@@ -35,13 +35,14 @@ export default function Missions({missionText, serviceType, description}: {missi
                 {missionText}
               </Text>
               <Flex>
-                {isFocused ? <Text mt="2" fontSize={12} fontWeight="medium" color="darkBlue.600" alignSelf="flex-start">
-                    <Text mt="2" fontSize="sm" color="coolGray.700">
-                        {description}
-                    </Text>
-                  </Text> : <Text mt="2" fontSize={12} fontWeight="medium" color="darkBlue.600">
+                {isFocused ? 
+                    <Text mt="2" fontSize={12} fontWeight="medium" color="darkBlue.600" alignSelf="flex-start">
+                        <Text mt="2" fontSize="sm" color="coolGray.700"> {description} </Text>
+                    </Text> : 
+                    <Text mt="2" fontSize={12} fontWeight="medium" color="darkBlue.600">
                     Read More
-                  </Text>}
+                    </Text>
+                }
               </Flex>
             </Box>;
       }}

@@ -10,8 +10,7 @@ export default function MissionsScreen({ navigation }: RootTabScreenProps<'Missi
     <View style={styles.container}>
       <Text style={styles.title}>Missions</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-<<<<<<< HEAD
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <Missions missionText="Find my lost cat" serviceType="Business" description='I lost my cat in the Queen Anne area. He is a three month old ginger kitten'/>
         <Missions missionText="Find my lost cat" serviceType="Business" description='I lost my cat in the Queen Anne area. He is a three month old ginger kitten'/>
         <Missions missionText="Find my lost cat" serviceType="Business" description='I lost my cat in the Queen Anne area. He is a three month old ginger kitten'/>
@@ -20,9 +19,6 @@ export default function MissionsScreen({ navigation }: RootTabScreenProps<'Missi
         <Missions missionText="Find my lost cat" serviceType="Business" description='I lost my cat in the Queen Anne area. He is a three month old ginger kitten'/>
         <Missions missionText="Find my lost cat" serviceType="Business" description='I lost my cat in the Queen Anne area. He is a three month old ginger kitten'/>
       </ScrollView>
-=======
-      <EditMissions path="/screens/MissionsScreen.tsx" />
->>>>>>> 6603033c1c79571d25f8afd8894d895d47f66b4c
     </View>
   );
 }
