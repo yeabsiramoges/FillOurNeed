@@ -33,8 +33,13 @@
     "react-native": "0.68.2",
     "react-native-safe-area-context": "4.2.4",
     "react-native-screens": "~3.11.1",
+<<<<<<< HEAD
     "react-native-web": "0.17.7",
     "react-native-svg": "12.3.0"
+=======
+    "react-native-svg": "12.3.0",
+    "react-native-web": "0.17.7"
+>>>>>>> 6603033c1c79571d25f8afd8894d895d47f66b4c
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

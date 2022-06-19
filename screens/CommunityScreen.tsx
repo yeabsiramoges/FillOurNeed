@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+import EditCommunity from '../components/EditCommunity';
 import { Text, View } from '../components/Themed';
 
 export default function CommunityScreen() {
@@ -8,7 +8,7 @@ export default function CommunityScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Community</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/CommunityScreen.tsx" />
+      <EditCommunity path="/screens/CommunityScreen.tsx" />
     </View>
   );
 }
