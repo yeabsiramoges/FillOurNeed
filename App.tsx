@@ -1,5 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-import { NativeBaseProvider } from 'native-base';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeBaseProvider } from 'native-base';
 import useCachedResources from './hooks/useCachedResources';
