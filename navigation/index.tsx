@@ -19,6 +19,23 @@ import CommunityScreen from '../screens/CommunityScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database"
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDFlq4ModItzY4I-yK7V4vtMO3TlwPtJuE",
+  authDomain: "fillourneed-80b86.firebaseapp.com",
+  projectId: "fillourneed-80b86",
+  storageBucket: "fillourneed-80b86.appspot.com",
+  messagingSenderId: "612459122798",
+  appId: "1:612459122798:web:0025de3fe6d6c98a6a567f",
+  databaseURL: "https://fillourneed-80b86-default-rtdb.firebaseio.com"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app);
+
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
